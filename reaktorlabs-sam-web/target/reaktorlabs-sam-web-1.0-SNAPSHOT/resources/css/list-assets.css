@@ -1,0 +1,156 @@
+body {
+    margin: 0 auto;
+    background: #FEFCFD;
+    color: #5D5D81;
+}
+
+#nav {
+    background: #5D5D81;
+}
+
+article {
+    padding-top: 4em;
+    width: 100%;
+}
+
+#addAssetTable {
+    table-layout: fixed;
+    width: 1140px;
+    word-wrap: break-word;
+}
+
+th {
+    text-align: center;
+    background: #BFCDE0;
+}
+
+.no-filter-control {
+    height: 0;
+}
+
+td {
+    text-align: center;
+}
+
+.data-visible {
+    width: 130px;
+    
+}
+
+.table-visible {
+    width: 130px;
+    vertical-align: middle!important;
+    
+}
+
+.samuser-visible {
+    vertical-align: bottom!important;
+    padding-bottom: 0.9em!important;
+}
+
+footer .page-link {
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.pagination {
+    float: right;
+}
+
+.edit-btn {
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+    width: 1.8em;
+    margin-top: 1em;
+}
+
+.samuser-edit-btn {
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+    width: 1.8em;
+    margin-top: 1em;
+}
+
+.save-btn {
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.samuser-save-btn {
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+    margin-top: 0.7em;
+}
+
+.input-visible {
+    width: 103px;
+}
+
+.output-visible {
+    width: 103px;
+    display: inline-block;
+}
+
+.select-visible {
+    width: 95px;
+}
+
+.btn {
+    margin-bottom: 1em;
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.btn:hover {
+    margin-bottom: 1em;
+    background: #5D5D81;
+    color: #FEFCFD;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.btn-outline-primary:active, .btn-outline-primary.active {
+    margin-bottom: 1em;
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 2px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.page-item:active .page-link, .page-item.active .page-link{
+    margin-bottom: 1em;
+    background: #5D5D81;
+    color: #FEFCFD;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.page-link:hover {
+    margin-bottom: 1em;
+    background: #5D5D81;
+    color: #FEFCFD;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.page-link:active, .page-link.active {
+    margin-bottom: 1em;
+    background: #BFCDE0;
+    color: #5D5D81;
+    border: 2px solid #CCCCCC;
+    font-weight: bold;
+}
+

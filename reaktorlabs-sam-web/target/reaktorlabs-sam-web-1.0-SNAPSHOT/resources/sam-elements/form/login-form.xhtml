@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite ="http://xmlns.jcp.org/jsf/composite"
+      xmlns:sam="http://xmlns.jcp.org/jsf/composite/sam-elements/form/form-elements">
+
+    <composite:interface>
+        <composite:attribute name="user" required="true"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <sam:string-input  display_label="User name: " input_id="j_username" 
+                           label="j_username" required="true" 
+                           value="#{cc.attrs.user.email}">
+        </sam:string-input>
+        <sam:secret-input  display_label="Password: " input_id="j_password" 
+                           label="j_password" required="true"
+                           value="#{cc.attrs.user.password}">
+        </sam:secret-input>
+    </composite:implementation>
+</html>

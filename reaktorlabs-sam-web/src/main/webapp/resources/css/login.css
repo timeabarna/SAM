@@ -1,0 +1,47 @@
+body {
+    width: 60%;
+    margin: 0 auto;
+    background: #D5D5D5;
+    color: #5D5D81;
+}
+
+form {
+    margin-bottom: 4em;
+    padding: 4em;
+    background: #FEFCFD;
+    color: #5D5D81;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.button {
+    border-radius: 12px;
+    background: #AEBBCC;
+    color: #FEFCFD;
+}
+
+.stack-trace-btn {
+    border-radius: 12px;
+    background: #FEFCFD;
+    color: #AEBBCC;
+    margin-top: 1em;
+}
+
+.stack-trace-btn:focus .stack-trace-btn.focus {
+    outline: none!important;
+}
+
+.btn:hover {
+    background: #5D5D81;
+    color: #FEFCFD;
+    border: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+
+.err-msg {
+    color: #C52233;
+}
+
+.trace-msg {
+    font-size: 12px;
+}

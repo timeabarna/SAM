@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite ="http://xmlns.jcp.org/jsf/composite"
+      xmlns:sam="http://xmlns.jcp.org/jsf/composite/sam-elements"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>
+        <composite:attribute name="asset" required="true"/>
+        <composite:attribute name="style" required="false"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <table class="table table-bordered table-hover" id="table" data-toggle="table"
+               data-filter-control="false">
+            <thead>
+                <tr>
+                    <sam:table-head data_id="asset_id" style_class="table-hidden" display_label="Asset id"></sam:table-head>
+                    <sam:table-head data_id="decomm" display_label="Decom"></sam:table-head>
+                    <sam:table-head data_id="asset" display_label="Asset name"></sam:table-head>
+                    <sam:table-head data_id="manufacturer" display_label="Manufacturer"></sam:table-head>
+                    <sam:table-head data_id="model" display_label="Model"></sam:table-head>
+                    <sam:table-head data_id="serial_number" display_label="Serial number"></sam:table-head>
+                    <sam:table-head data_id="asset_tag" display_label="Asset tag"></sam:table-head>
+                    <sam:table-head data_id="status" filter_type="select" display_label="Status"></sam:table-head>
+                    <sam:table-head data_id="owner" display_label="Owner"></sam:table-head>
+                    <sam:table-head data_id="data" filter_type="select" display_label="End of support"></sam:table-head>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <sam:table-data style_class="table-hidden" display_label="11"></sam:table-data>
+                    <td>
+                        <h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+                    </td>
+                    <sam:table-data display_label="Printer"></sam:table-data>
+                    <sam:table-data display_label="HP"></sam:table-data>
+                    <sam:table-data display_label="LaserJet 5"></sam:table-data>
+                    <sam:table-data display_label="HP-234-87-A"></sam:table-data>
+                    <sam:table-data display_label="P-001"></sam:table-data>
+                    <sam:table-data display_label="Assigned"></sam:table-data>
+                    <sam:table-data display_label="Tod Parker"></sam:table-data>
+                    <sam:table-data display_label="12/04/2004"></sam:table-data>
+                </tr>
+                <tr>
+                    <sam:table-data style_class="table-hidden" display_label="12"></sam:table-data>
+                    <td>
+                        <h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+                    </td>
+                    <sam:table-data display_label="Display"></sam:table-data>
+                    <sam:table-data display_label="LG"></sam:table-data>
+                    <sam:table-data display_label="IP624C"></sam:table-data>
+                    <sam:table-data display_label="LG-11-765-KL"></sam:table-data>
+                    <sam:table-data display_label="D-001"></sam:table-data>
+                    <sam:table-data display_label="Assigned"></sam:table-data>
+                    <sam:table-data display_label="Tod Parker"></sam:table-data>
+                    <sam:table-data display_label="23/01/2020"></sam:table-data>
+                </tr>
+                <tr>
+                    <sam:table-data style_class="table-hidden" display_label="13"></sam:table-data>
+                    <td>
+                        <h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+                    </td>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                </tr>
+                <tr>
+                    <sam:table-data style_class="table-hidden" display_label="15"></sam:table-data>
+                    <td>
+                        <h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+                    </td>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                </tr>
+                <tr>
+                    <sam:table-data style_class="table-hidden" display_label="16"></sam:table-data>
+                    <td>
+                        <h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+                    </td>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                </tr>
+            </tbody>
+        </table>
+    </composite:implementation>
+</html>
+

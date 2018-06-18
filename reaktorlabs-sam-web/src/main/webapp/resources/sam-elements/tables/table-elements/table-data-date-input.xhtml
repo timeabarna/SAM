@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite ="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <composite:interface>
+        <composite:attribute name="display_label" required="true"/>
+        <composite:attribute name="style_class" default="input-visible"/>
+        <composite:attribute name="value_ctrl" required="true"/>
+        <composite:attribute name="output_value_ctrl" required="true"/>
+        <composite:attribute name="data_id" required="true"/>
+        <composite:attribute name="style_type" required="false"/>
+        <composite:attribute name="output_style_type" required="false"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <td class="data-visible">
+            <h:outputText id="#{cc.attrs.data_id.concat('Output')}"  value="#{cc.attrs.output_value_ctrl}"
+                          rendered="#{not addAssetController.inputFieldToEdtitMode[cc.attrs.data_id]}"
+                          styleClass="#{cc.attrs.output_style_type}">
+                <f:convertDateTime type="date" pattern="dd-MM-yyyy"></f:convertDateTime>
+            </h:outputText>
+            <h:inputText required="true" id="#{cc.attrs.data_id}" size="7" styleClass="#{cc.attrs.style_class}"
+                         label="#{cc.attrs.display_label}" value="#{cc.attrs.value_ctrl}"
+                         rendered="#{addAssetController.inputFieldToEdtitMode[cc.attrs.data_id]}"
+                         requiredMessage="Value is required." validatorMessage="Please use format dd-MM-yyyy"
+                         converterMessage="Please use format dd-MM-yyyy">
+                <f:convertDateTime  pattern="dd-MM-yyyy"></f:convertDateTime>
+            </h:inputText>
+            
+            <h:commandButton value="+" styleClass="edit-btn" id="#{cc.attrs.data_id.concat('Edit')}" 
+                             label="#{cc.attrs.display_label.concat('Edit')}"
+                             actionListener="#{addAssetController.collectEditButtonId}"
+                             action="#{addAssetController.edit}" 
+                             rendered="#{not addAssetController.inputFieldToEdtitMode[cc.attrs.data_id]}" />
+            <h:commandButton value="✓" styleClass="save-btn"  id="#{cc.attrs.data_id.concat('Save')}" 
+                             label="#{cc.attrs.display_label.concat('Save')}" 
+                             actionListener="#{addAssetController.collectSaveButtonId}" 
+                             action="#{addAssetController.save}" 
+                             rendered="#{addAssetController.inputFieldToEdtitMode[cc.attrs.data_id]}" />
+            
+            <h:message for="#{cc.attrs.display_label}" style="color: red;display: inherit;"></h:message>
+        </td>
+    </composite:implementation>
+</html>

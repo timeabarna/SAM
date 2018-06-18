@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite ="http://xmlns.jcp.org/jsf/composite"
+      xmlns:sam="http://xmlns.jcp.org/jsf/composite/sam-elements"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>
+        <composite:attribute name="asset" required="true"/>
+        <composite:attribute name="style" required="false"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <table class="table table-bordered table-hover" id="table" data-toggle="table"
+               data-filter-control="false">
+            <thead>
+                <tr>
+                    <sam:table-head data_id="asset" display_label="Asset name"></sam:table-head>
+                    <sam:table-head data_id="manufacturer" display_label="Manufacturer"></sam:table-head>
+                    <sam:table-head data_id="model" display_label="Model"></sam:table-head>
+                    <sam:table-head data_id="serial_number" display_label="Serial number"></sam:table-head>
+                    <sam:table-head data_id="asset_tag" display_label="Asset tag"></sam:table-head>
+                    <sam:table-head data_id="status" filter_type="select" display_label="Status"></sam:table-head>
+                    <sam:table-head data_id="owner" display_label="Owner"></sam:table-head>
+                    <sam:table-head data_id="data" filter_type="select" display_label="End of support"></sam:table-head>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                    <td>
+                        <h:inputText></h:inputText>
+                    </td>
+                </tr>
+                <tr>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                </tr>
+                <tr>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                </tr>
+                <tr>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                </tr>
+                <tr>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                    <sam:table-data display_label=""></sam:table-data>
+                </tr>
+            </tbody>
+        </table>
+    </composite:implementation>
+</html>
+

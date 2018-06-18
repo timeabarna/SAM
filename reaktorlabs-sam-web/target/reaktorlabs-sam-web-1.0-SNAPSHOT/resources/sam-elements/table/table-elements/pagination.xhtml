@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite ="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>
+        <composite:attribute name="style_class" default="page-link"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <footer class="d-flex justify-content-end">
+            <ul class="pagination">
+                <li class="page-item">
+                    <h:commandLink styleClass="#{cc.attrs.style_class}" action="#{pageController.previous}">
+                        Previous
+                    </h:commandLink>
+                </li>
+                <li class="page-item">
+                    <h:commandLink styleClass="#{cc.attrs.style_class}" action="#{pageController.page}">
+                        1
+                    </h:commandLink>
+                </li>
+                <li class="page-item">
+                    <h:commandLink styleClass="#{cc.attrs.style_class}" action="#{pageController.page}">
+                        2
+                    </h:commandLink>
+                </li>
+                <li class="page-item">
+                    <h:commandLink styleClass="#{cc.attrs.style_class}" action="#{pageController.page}">
+                        3
+                    </h:commandLink>
+                </li>
+                <li class="page-item">
+                    <h:commandLink styleClass="#{cc.attrs.style_class}" action="#{pageController.next}">
+                        Next
+                    </h:commandLink>
+                </li>
+            </ul>
+        </footer>
+    </composite:implementation>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite ="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <composite:interface>
+        <composite:attribute name="input_id" required="true"/>
+        <composite:attribute name="display_label" required="true"/>
+        <composite:attribute name="label" required="true"/>
+        <composite:attribute name="value" required="true"/>
+        <composite:attribute name="required" default="false"/>
+        <composite:attribute name="style_class" default="form-group"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <div class="#{cc.attrs.style_class}">
+            <h:outputLabel value="#{cc.attrs.display_label}">
+                <h:inputText styleClass="form-control" id="#{cc.attrs.input_id}" 
+                             label="#{cc.attrs.label}" value="#{cc.attrs.value}" 
+                             required="#{cc.attrs.required}">
+                 <f:converter converterId = "assetOwnerConverter"/>  
+                </h:inputText>
+            </h:outputLabel>
+            <h:message for="#{cc.attrs.input_id}" style="color: red"></h:message>
+        </div>
+    </composite:implementation>
+</html>
+

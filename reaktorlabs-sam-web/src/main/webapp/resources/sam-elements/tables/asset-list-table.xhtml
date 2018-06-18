@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite ="http://xmlns.jcp.org/jsf/composite"
+      xmlns:samte="http://xmlns.jcp.org/jsf/composite/sam-elements/tables/table-elements"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>
+        <composite:attribute name="asset" required="true"/>
+        <composite:attribute name="style" required="false"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <table class="table table-bordered table-hover" id="table" data-toggle="table"
+               data-filter-control="true">
+            <thead>
+                <tr>
+                    <th>
+                        <h:selectBooleanCheckbox id="allSelect" styleClass="check-all" onchange="checkAll('listForm', this.checked)" 
+                                                 value="#{listController.allSelected}">
+                        </h:selectBooleanCheckbox>
+                    </th>
+                    <samte:table-head data_id="asset" filter_type="input" display_label="Asset name"></samte:table-head>
+                    <samte:table-head data_id="manufacturer" filter_type="input" display_label="Manufacturer"></samte:table-head>
+                    <samte:table-head data_id="model" filter_type="input" display_label="Model"></samte:table-head>
+                    <samte:table-head data_id="serial_number" filter_type="input" display_label="Serial number"></samte:table-head>
+                    <samte:table-head data_id="asset_tag" filter_type="input" display_label="Asset tag"></samte:table-head>
+                    <samte:table-head data_id="status" filter_type="select" display_label="Status"></samte:table-head>
+                    <samte:table-head data_id="owner" filter_type="input" display_label="Owner"></samte:table-head>
+                    <samte:table-head data_id="data" filter_type="select" display_label="End of support"></samte:table-head>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach varStatus="i" begin="0" end="#{listController.size()-1}">
+                    <c:set var="asset" value="#{listController.getAssetByIndex(i.index)}">
+                    </c:set>
+                    <tr>
+                        <td>
+                            <h:selectBooleanCheckbox id="decom#{i.index}" onchange="setCheckAll('listForm')" styleClass="select-all"
+                                                     value="#{listController.listIndexToSelection[i.index]}">
+                            </h:selectBooleanCheckbox>
+                        </td>
+                        <samte:table-data display_label="#{asset.assetName}"></samte:table-data>
+                        <samte:table-data display_label="#{asset.manufacturer}"></samte:table-data>
+                        <samte:table-data display_label="#{asset.model}"></samte:table-data>
+                        <samte:table-data display_label="#{asset.serialNumber}"></samte:table-data>
+                        <samte:table-data display_label="#{asset.assetTag}"></samte:table-data>
+                        <samte:table-data display_label="#{asset.status}"></samte:table-data>
+                        <samte:table-data display_label="#{asset.owner.lastName}
+                                          #{asset.owner.firstName}"></samte:table-data>
+                        <samte:table-data display_label="#{asset.supportEndDate}"></samte:table-data>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+    </composite:implementation>
+</html>
