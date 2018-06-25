@@ -1,2 +1,0 @@
-# SAM
-Simplified Asset Management
