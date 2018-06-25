@@ -21,7 +21,7 @@
                           styleClass="#{cc.attrs.output_style_type}"/>
             <h:inputText id="#{cc.attrs.data_id}" size="10" label="#{cc.attrs.display_label}"
                          value="#{cc.attrs.value_ctrl}" styleClass="#{cc.attrs.style_class}"
-                         rendered="#{addAssetController.inputFieldToEdtitMode[cc.attrs.data_id]}" />
+                         rendered="#{addAssetController.inputFieldToEdtitMode[cc.attrs.data_id]}"/>
 
             <h:commandButton value="+" styleClass="edit-btn" id="#{cc.attrs.data_id.concat('Edit')}" 
                              label="#{cc.attrs.display_label.concat('Edit')}"

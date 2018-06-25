@@ -9,7 +9,8 @@
         <ui:define name="form">
             #{authController.logout()}
             <sam:login-form user="#{userController.user}" />
-            <h:commandButton styleClass="btn button" value="Login" action="#{authController.login(userController.user)}"/>      
+            <h:commandButton id="login" styleClass="btn button" value="Login" action="#{authController.login(userController.user)}"/>      
+            <h:message for="login" style="color: red;display: inherit;"></h:message>
         </ui:define>
     </ui:composition>
 </html>

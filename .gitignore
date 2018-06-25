@@ -1,4 +1,4 @@
 
 **/nb-configuration.xml
-/timea_barna/src/sam/reaktorlabs-sam-logic/target/
-/timea_barna/src/sam/reaktorlabs-sam-web/target/
+**/timea_barna/src/sam/reaktorlabs-sam-logic/target/
+**/timea_barna/src/sam/reaktorlabs-sam-web/target/

@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>ERROR page</div>
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition template="page-templates/form-template.xhtml">
+        <ui:define name="title">Simplified Asset Management Error</ui:define>
+
+        <ui:define name="form">
+
+            <h5 class="err-msg">Error message</h5>
+            #{requestScope['error-message']}
+
+            <div data-toggle='collapse' data-target='#stack_trace'>
+                <h:commandButton type="button" class="stack-trace-btn" value="Stack trace"></h:commandButton>
+            </div>
+            <div id="stack_trace" class="collapse">
+                <ul>
+                    <ui:repeat value="#{requestScope['error-stack']}" var="stack">
+                        <li class="trace-msg">#{stack.className} - #{stack.methodName} - #{stack.fileName} (#{stack.lineNumber})</li>
+                    </ui:repeat>
+                </ul>
+            </div>
+        </ui:define>
+    </ui:composition>
 </html>

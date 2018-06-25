@@ -6,6 +6,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -29,11 +30,11 @@ public class SamUserTest {
     }
 
     @Test
-    public void testSamUserNamValidation() {
+    public void testSamUserNameValidation() {
         final SamUser userWithName = new SamUser();
         userWithName.setFirstName("a");
         userWithName.setLastName("b");
-        userWithName.setEmail("aladar@aladar.com");
+        userWithName.setEmail("john@doe.com");
         userWithName.setPassword("password");
         userWithName.setUserRole(SamUserRoleEnum.STORE);
 
@@ -50,4 +51,23 @@ public class SamUserTest {
         assertEquals("it should have 2", 2, violations.size());
     }
 
+    @Test
+    public void testSamUserEmailValidation() {
+        final SamUser userWithEmail = new SamUser();
+        userWithEmail.setFirstName("John");
+        userWithEmail.setLastName("Doe");
+        userWithEmail.setEmail("doe.com");
+        userWithEmail.setPassword("password");
+        userWithEmail.setUserRole(SamUserRoleEnum.STORE);
+
+        final Set<ConstraintViolation<SamUser>> violations = this.validator.validate(userWithEmail);
+        
+        Annotation annotation
+                = violations.iterator().
+                        next().getConstraintDescriptor().
+                        getAnnotation();
+
+        assertEquals(Pattern.class, annotation.annotationType());
+        assertEquals("it should have 1", 1, violations.size());
+    }
 }
